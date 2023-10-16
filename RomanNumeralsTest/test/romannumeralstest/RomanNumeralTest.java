@@ -109,6 +109,16 @@ public class RomanNumeralTest {
       
         
     }
+    /*Test to check the maximum number of digits
+    
+    */
+    @Test
+    public void maxDigits(){
+        assertEquals(false, converter.checkSize("MMMMMMMMMM"));
+        assertEquals(false, converter.checkSize("XXXXXXXXXX"));
+        assertEquals(true, converter.checkSize("MMMX"));
+        assertEquals(true, "LLLLLLLLL");
+    }
     
     
 }
