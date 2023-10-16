@@ -26,6 +26,9 @@ public class RomanNumeral {
     public static int romanToInt(String s){
 
         int convertedNumber = 0;
+        
+        if(checkSize(s)==false)
+                return 0;
     
         for(int i=0; i<s.length(); i++){
             int currentNumber = map.get(s.charAt(i));
@@ -38,5 +41,10 @@ public class RomanNumeral {
                 convertedNumber -= currentNumber;
         }
         return convertedNumber;
+    }
+    public static boolean checkSize (String s){
+        if (s.length() <=9 )
+            return true;
+        return false;
     }
 }
