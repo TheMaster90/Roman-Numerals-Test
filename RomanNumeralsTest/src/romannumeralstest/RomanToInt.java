@@ -30,6 +30,8 @@ public class RomanToInt {
             romNum = input.nextLine();
             
             int intNum = converter.romanToInt(romNum);
+            if (intNum == 0)
+                continue;
             System.out.println("The Roman number is "+intNum);
                         
             System.out.print("End? [Y/N]: ");        
